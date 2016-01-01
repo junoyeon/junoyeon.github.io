@@ -1,0 +1,209 @@
+{
+    "config" : {
+        "U" : 72.0,
+        "length" : 140,
+        "images" : {
+            "1000" : ["lanes/brick_1000"],
+            "1001" : ["lanes/brick_1001"],
+            "1010" : ["lanes/brick_1010"],
+            "1011" : ["lanes/brick_1011"],
+            "1100" : ["lanes/brick_1100"],
+            "1101" : ["lanes/brick_1101"],
+            "1110" : ["lanes/brick_1110"],
+            "1111" : ["lanes/brick_1111"],
+            "11111" : ["lanes/brick_11111_0", "lanes/brick_11111_1", "lanes/brick_11111_2", 
+                       "lanes/brick_11111_3", "lanes/brick_11111_4"]
+        },
+        "goals" : [
+            {
+                "name" : "bronze",
+                "conditions" : [ ["ruby", 20] ],
+                "rewards" : [ ["diamond", 1] ]
+            },
+            {
+                "name" : "silver",
+                "conditions" : [ ["ruby", 30] ],
+                "rewards" : [ ["cake", 1] ]
+            },
+            {
+                "name" : "gold",
+                "conditions" : [ ["ruby", 37] ],
+                "rewards" : [ ["gold_medal", 1] ]
+            }
+
+        ],
+        "life" : 2
+    },
+    "snippets" : [ 
+        {
+            "name" : "onelane",
+            "elements" : {
+                "holes" : [
+                    [1,0,10], [2,0,10], [4,0,10], [5,0,10], [6,0,10]
+                          ]
+            }
+        },
+        {
+            "name" : "dotlane6",
+            "elements" : {
+                "holes" : [
+                    [6,0,1], [6,2,1], [6,4,1], [6,6,1], [6,8,1]
+                          ]
+            }
+        },
+        {
+            "name" : "dotlane5",
+            "elements" : {
+                "holes" : [
+                    [5,0,1], [5,2,1], [5,4,1], [5,6,1], [5,8,1]
+                          ]
+            }
+        },
+
+        {
+            "name" : "dotlane_and_ruby",
+            "elements" : {
+                "holes" : [
+                    [5,0,1], [5,2,1], [5,4,1], [5,6,1], [5,8,1], [5,10,1], [5,12,1], [5,14,1], [5,16,1], [5,18,1],
+                    [6,0,1], [6,2,1], [6,4,1], [6,6,1], [6,8,1], [6,10,1], [6,12,1], [6,14,1], [6,16,1], [6,18,1]
+                          ],
+				"items" : [
+					["ruby", 5,2,1], 
+                    ["ruby", 5,6,1], 
+                    ["ruby", 5,10,1], 
+                    ["ruby", 5,14,1], 
+                    ["ruby", 5,18,1], 
+					["ruby", 6,1,1], 
+                    ["ruby", 6,5,1], 
+                    ["ruby", 6,9,1], 
+                    ["ruby", 6,13,1], 
+                    ["ruby", 6,17,1] 
+						  ],
+				"monsters" : [
+					["enemy2:one",5,9,1],
+					["enemy2:one",5,19,1]
+							 ]
+            }
+        },
+
+        {
+            "name" : "d_escalator",
+            "elements" : {
+                "holes" : [
+                    [6,0,0], [6,1,5],
+                    [5,0,1], [5,2,4],
+                    [4,0,2], [4,3,3],
+                    [3,0,3], [3,4,2],
+                    [2,0,4], [2,5,1],
+                    [1,0,5], [1,6,0]
+                          ]
+            }
+        },
+        {
+            "name" : "u_escalator",
+            "elements" : {
+                "holes" : [
+                    [1,0,0], [1,1,5],
+                    [2,0,1], [2,2,4],
+                    [3,0,2], [3,3,3],
+                    [4,0,3], [4,4,2],
+                    [5,0,4], [5,5,1],
+                    [6,0,5], [6,6,0]
+                          ]
+            }
+        },
+        {
+            "name" : "u_escalator_diamond",
+            "elements" : {
+                "items" : [
+                    ["diamond", 1,0,1], 
+                    ["diamond", 2,1,1], 
+                    ["diamond", 3,2,1], 
+                    ["diamond", 4,3,1], 
+                    ["diamond", 5,4,1], 
+                    ["diamond", 6,5,1] 
+                          ]
+            }
+        },
+        {
+            "name" : "9ruby",
+            "elements" : {
+                "items" : [
+                    ["ruby",2,0,3], ["ruby",3,3,3], ["ruby",4,6,3]
+                          ]
+            }
+        }
+    ],
+    "placements" : [
+        {
+            "type" : "basic",
+            "elements" : {
+                "holes" : [
+                    [1,0,10], [2,0,10], [4,0,10], [5,0,10], [6,0,10],
+                    [1,50,3]
+                          ],
+                "obstacles" : [
+                    ["stone",2,10,1], ["stone",2,29,1],["stone",3,32,1],["stone",4,35,1]
+                              ]
+            }
+        },
+        {
+            "type" : "basic",
+            "elements" : {
+                "items" : [
+                    ["apple",2,11,4], ["apple",3,22,2],["apple",2,32,1]
+                          ],
+                "monsters" : [
+                    ["enemy:hor",3,20,1],["enemy1:hor",6,30,1],["enemy1:hor",3,35,1],["enemy1:hor",1,40,1], 
+					["enemy2:one",2,45,1], ["enemy:one",5,43,1]
+                             ]
+            }
+        },
+        {
+            "type" : "snippet",
+            "name" : "onelane",
+            "position" : [15,132]
+        },
+        {
+            "type" : "snippet",
+            "name" : "d_escalator",
+            "position" : [50,60,200,210,220,230]
+        },
+        {
+            "type" : "snippet",
+            "name" : "u_escalator",
+            "position" : [55,65,205,215,225,235]
+        },
+        {
+            "type" : "snippet",
+            "name" : "u_escalator_diamond",
+            "position" : [55,65]
+        },
+        {
+            "type" : "snippet",
+            "name" : "dotlane5",
+            "position" : [1, 10, 20, 30, 40, 160, 170, 180]
+        },
+        {
+            "type" : "snippet",
+            "name" : "dotlane6",
+            "position" : [1, 10, 20, 30, 40, 160, 170, 180]
+        },
+        {
+            "type" : "snippet",
+            "name" : "dotlane_and_ruby",
+            "position" : [70, 90, 110]
+        },
+        {
+            "type" : "snippet",
+            "name" : "9ruby",
+            "position" : [30]
+        },
+        {
+            "type" : "snippet",
+            "name" : "otherjson.json/superjump",
+            "position" : [35]
+        }
+    ]
+}
+
